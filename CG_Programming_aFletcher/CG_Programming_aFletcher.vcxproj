@@ -43,9 +43,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\Librarys\glew-1.12.0\include\GL;$(ProjectDir)\..\Librarys\glfw-3.1.1.bin.WIN32\include\GLFW;$(ProjectDir)\..\Librarys\glm-0.9.6.3\glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Librarys\glew-1.12.0\lib;$(SolutionDir)\Librarys\glfw-3.1.1.bin.WIN32\lib-vc2012;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -54,11 +57,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\Librarys\glew-1.12.0\include\GL;$(ProjectDir)\..\Librarys\glfw-3.1.1.bin.WIN32\include\GLFW;$(ProjectDir)\..\Librarys\glm-0.9.6.3\glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Librarys\glew-1.12.0\lib;$(SolutionDir)\Librarys\glfw-3.1.1.bin.WIN32\lib-vc2012;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -66,6 +72,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicFragmentShader.fragmentshader" />
+    <None Include="BasicVertexShader.vertexshader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
