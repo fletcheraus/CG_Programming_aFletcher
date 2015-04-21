@@ -10,6 +10,8 @@
 #include <glfw3.h>
 #include <glm/glm.hpp> 
 #include <memory>
+#include <fstream>
+#include <string>
 
 
 using namespace std;
@@ -24,6 +26,7 @@ using namespace glm;
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 768
 #define GLFW_FAIL 0
+#define GLFW_OK 0
 
 extern GLFWwindow* window;
 extern GLint shaderStatus;
